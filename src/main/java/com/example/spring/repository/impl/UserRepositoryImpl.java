@@ -9,20 +9,19 @@ import org.springframework.stereotype.Component;
 import com.example.spring.domain.User;
 import com.example.spring.repository.UserRepository;
 
-
 @Component
-public class UserRepositoryImpl implements UserRepository{
+public class UserRepositoryImpl implements UserRepository {
 
 	@Override
 	public List<User> list() {
 		System.out.println("GET USER LIST");
-		return new ArrayList<User>(Arrays.asList(new User("U1","U1"),new User("U2","U2")));
+		return new ArrayList<User>(Arrays.asList(new User("U1", "U1"), new User("U2", "U2")));
 	}
 
 	@Override
 	public User get(int id) {
 		System.out.println("GET USER BY ID");
-		return new User("User","User");
+		return new User("User", "User");
 	}
 
 	@Override

@@ -1,14 +1,15 @@
 package com.example.spring.controller;
 
-import com.example.spring.domain.User;
-import com.example.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.example.spring.domain.User;
+import com.example.spring.service.UserService;
 
 public class UserController {
 
 	@Autowired
-	@Qualifier("Service2")
+	@Qualifier("service1")
 	private UserService userService;
 	
 	public void createUser(User user){

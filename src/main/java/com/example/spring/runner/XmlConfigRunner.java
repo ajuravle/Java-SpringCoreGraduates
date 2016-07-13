@@ -17,6 +17,7 @@ public class XmlConfigRunner implements ConfigRunner{
 		UserRepository userRepository = context.getBean(UserRepository.class);
 		System.out.println(userRepository.toString());
 		
+		
 	}
 
 }

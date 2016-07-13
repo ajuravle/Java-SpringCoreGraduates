@@ -5,5 +5,11 @@
 
 	<bean id="userRepository" class="com.example.spring.repository.impl.UserRepositoryImpl">
 	</bean>
+	
+	<bean id="service1" class="com.example.spring.service.impl.UserServiceImpl">
+	</bean>
+	
+	<bean id="service2" class="com.example.spring.service.impl.UserServiceImpl2">
+	</bean>
 
 </beans>

@@ -14,7 +14,7 @@ import com.example.spring.repository.UserRepository;
 import com.example.spring.service.UserService;
 
 @Component
-@Service("Service2")
+@Service("service2")
 public class UserServiceImpl2 implements UserService, ApplicationContextAware {
 
 	@Autowired
@@ -42,8 +42,8 @@ public class UserServiceImpl2 implements UserService, ApplicationContextAware {
 	public void setApplicationContext(ApplicationContext arg0) throws BeansException {
 		applicationContext = arg0;
 	}
-	
-	ApplicationContext  getApplicationContext(){
+
+	ApplicationContext getApplicationContext() {
 		return applicationContext;
 	}
 
