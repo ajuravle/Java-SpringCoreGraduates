@@ -15,7 +15,9 @@ public class JavaConfigRunner implements ConfigRunner {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 
 		UserController userController = context.getBean(UserController.class);
-		userController.createUser(new User("John", "John"));
+		User u = new User("John", "John");
+		System.out.println("------------> "+u);
+		userController.createUser(u);
 
 		context.registerShutdownHook();
 	}

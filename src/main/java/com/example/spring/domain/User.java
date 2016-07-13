@@ -1,5 +1,11 @@
 package com.example.spring.domain;
 
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
+@Component
 public class User {
 	private String id;
 	private String firstName;

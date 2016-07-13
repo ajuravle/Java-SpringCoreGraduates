@@ -2,18 +2,25 @@ package com.example.spring.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import com.example.spring.domain.User;
 import com.example.spring.repository.UserRepository;
 import com.example.spring.service.UserService;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 @Component
+@Service("Service1")
 public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private User u;
+	@Autowired
+	private User u2;
 	
 	@Override
 	public List<User> list() {
@@ -31,5 +38,7 @@ public class UserServiceImpl implements UserService {
 	public void save(User user) {
 		//call method from UserRepository and remove throw
 		userRepository.save(user);
+		
+		System.out.println("User1: "+u+"\nUser2: "+u2);
 	}
 }

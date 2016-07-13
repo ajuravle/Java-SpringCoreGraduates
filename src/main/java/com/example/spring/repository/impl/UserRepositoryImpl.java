@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.config.BeanDefinition; 
 
 import com.example.spring.domain.User;
 import com.example.spring.repository.UserRepository;
 
-@Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
+
 @Component
 public class UserRepositoryImpl implements UserRepository{
 
